@@ -21,29 +21,22 @@ void miniMaxSum(int arr_count, int* arr) {
 
     for(i=0; i<arr_count; i++)
     {
-        if(min>arr[i])
+        sum += arr[i];
+        if(arr[i]<min)
         {
             min = arr[i];
         }
-    }
-//  printf("min:%d\n", min);
-
-    for(i=0; i<arr_count; i++)
-    {
-        if(max<arr[i])
+        if(arr[i]>max)
         {
             max = arr[i];
-        }    
+        }
+        
     }
+//  printf("min:%d\n", min);
 //  printf("max:%d\n", max);
     
-    for(i=0; i<arr_count; i++)
-    {
-        sum += arr[i];
-    }
     minSum = sum - max;
     maxSum = sum - min;
-
     printf("%d %d", minSum, maxSum);
 }
 
