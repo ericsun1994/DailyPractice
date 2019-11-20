@@ -35,12 +35,13 @@ int findMaxNumber(int arr_count, int *arr)
         if(arr[i] > max)
             max = arr[i];
     }
-
-    for(i=0; i<arr_count; i++)
+ 
+    for(i=arr_count-1; i>0; i--)
     {
         if(arr[i] == max)
-            tmp = i+1;
-    }
+            birdId = i+1;
+    } 
+ 
     return tmp;
 }
 
