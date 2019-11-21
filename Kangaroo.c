@@ -22,10 +22,25 @@ char** split_string(char*);
 // char* str = "hello world";
 // return str;
 //
-char* kangaroo(int x1, int v1, int x2, int v2) {
+char* kangaroo(int x1, int v1, int x2, int v2) 
+{
+    int jCnt=0; // counts of Jump 
+    int s1, s2; // location of Kangaroo1(s1) and Kangaroo2(s2)
+    char *str = "NO";
 
-    int n; // number of Jump 
+    s1 = x1 + v1*jCnt;    
+    s2 = x2 + v2*jCnt;
 
+    for(jCnt=1; s1<s2; jCnt++)
+    {
+        if(s1 == s2)
+        {
+            strcpy(str, "YES");
+        }
+        s1 = x1 + v1*jCnt;    
+        s2 = x2 + v2*jCnt;
+    }
+    return str;
 }
 
 int main()
