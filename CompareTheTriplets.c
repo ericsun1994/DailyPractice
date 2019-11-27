@@ -43,18 +43,18 @@ char** split_string(char*);
  * }
  *
  */
- /* 
-  Step1: Alice 점수와 Bob의 점수를 저장할 행렬을 함수 내에서 동적 할당 및 선언
-  Step2: for문을 이용하여 3개의 Alice의 숫자와 Bob의 숫자를 비교하고 각각의 점수 값 저장
-  Step3: res 점수 행렬 return
-  */
+/* 
+ *  Step1: Alice 점수와 Bob의 점수를 저장할 행렬을 함수 내에서 동적 할당 및 선언
+ *  Step2: for문을 이용하여 3개의 Alice의 숫자와 Bob의 숫자를 비교하고 각각의 점수 값 저장
+ *  Step3: res 점수 행렬 return
+ */
 int* compareTriplets(int a_count, int* a, int b_count, int* b, int* result_count) 
 {
     // 점수를 저장할 행렬의 크기 선언
     *result_count = 2;
     
     // res 행렬 동적할당 및 초기화 (ALice 점수, Bob의 점수)로 구성
-    int *res = (int*)malloc(result_count*sizeof(int));
+    int *res = malloc(sizeof(int)*2);
   
     res[0]=0;
     res[1]=0;
