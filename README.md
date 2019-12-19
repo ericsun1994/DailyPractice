@@ -1,2 +1,3 @@
 # DailyPractice
-Solve Algorithm Problems in HackerRank
+Do it yourself.
+Solve Algorithm Problems in HackerRank.
